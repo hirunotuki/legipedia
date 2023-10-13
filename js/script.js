@@ -39,19 +39,19 @@ $(() => {
 
 //align each element in bi-lang-container 
 function alignment() {
-  var secs = $('div.code-area:lang(ja) *[id^="ja-sec"]').length;
+  var secs = $('.bi-lang>.code-area:lang(ja) *[id^="ja-sec"]').length;
   console.log(secs);
   for (let i = secs; i >= 1; i--) {
-    var heightJ = $('div.code-area:lang(ja) *#ja-sec' + i).height();
-    var heightE = $('div.code-area:lang(en) *#en-sec' + i).height();
+    var heightJ = $('.bi-lang>.code-area:lang(ja) *#ja-sec' + i).height();
+    var heightE = $('.bi-lang>.code-area:lang(en) *#en-sec' + i).height();
     var heightFx = Math.max(heightJ, heightE);
-    $('div.code-area *[id$="sec' + i + '"]').css('height', heightFx + 'px');
+    $('.bi-lang>.code-area *[id$="sec' + i + '"]').css('height', heightFx + 'px');
   }
 }
 $(window).on('load', () => {
   alignment()
 })
 $(window).on('resize', () => {
-  $('div.code-area *[id*="sec"]').css('height', '');
+  $('.bi-lang>div.code-area *[id*="sec"]').css('height', '');
   alignment()
 })
