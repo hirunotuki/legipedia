@@ -1,0 +1,20 @@
+@mixin lh-crop($lh, $be, $af) {
+  @if $be >0 {
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: calc((1 - $lh) * .5em * $be);
+    }
+  }
+  @if $af >0 {
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin-bottom: calc((1 - $lh) * .5em * $af);
+    }
+  }
+}

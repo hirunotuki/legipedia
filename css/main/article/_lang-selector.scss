@@ -1,0 +1,59 @@
+@use '../../variables/index' as var;
+
+div.lang-selector {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: var.$hdr-hgt-art var.$pds-art 0;
+
+  font: {
+    family: 'agenda-one', sans-serif;
+    size: 1.25rem;
+    weight: 600;
+  }
+
+  line-height: 1;
+  text-align: center;
+
+  div.wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1em;
+
+    div {
+      width: fit-content;
+      button {
+        display: inline-block;
+        transition: all .1s ease-out;
+
+        &.selected,
+        &:hover {
+          transition: all .1s ease-out;
+          color: var.$clr-accnt;
+        }
+
+        // &:hover {
+        //   transform: scale(1.14);
+        //   transform-origin: center center;
+        // }
+      }
+
+      &::after {
+        content: "/";
+        display: inline;
+        width: 0;
+        height: 0;
+        margin-left: 1rem;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+
+    }
+  }
+}

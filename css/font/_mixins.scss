@@ -1,0 +1,14 @@
+@use 'line-seed-ja' as lsa;
+@use 'agenda-one' as ag1;
+
+@include lsa.ff-line-seed-ja(200);
+@include lsa.ff-line-seed-ja(400);
+@include lsa.ff-line-seed-ja(600);
+@include lsa.ff-line-seed-ja(800);
+
+@include ag1.ff-lp-agenda-one-ja(400);
+@include ag1.ff-lp-agenda-one-ja(500);
+@include ag1.ff-lp-agenda-one-ja(600);
+@include ag1.ff-lp-agenda-one-ja(700);
+@include ag1.ff-lp-agenda-one-ja(800);
+@include ag1.ff-lp-agenda-one-ja(900);

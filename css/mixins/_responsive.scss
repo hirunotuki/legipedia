@@ -1,0 +1,14 @@
+@use '../variables/index' as var;
+
+@mixin responsive($breakpoint) {
+    @if map-has-key(var.$breakpoints, $breakpoint) {
+      @media screen and #{inspect(map-get(var.$breakpoints, $breakpoint))} {
+        @content;
+      }
+    }
+   
+    // マップ型で定義されていない値が呼び出された時はエラーを返す
+    @else {
+      @error "Designated breakpoint is NOT defined." + "Available breakpoints are as follows. -> #{map-keys($breakpoints)}";
+    }
+  }

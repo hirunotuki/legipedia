@@ -1,0 +1,536 @@
+@use '../../variables/index' as var;
+
+main.article {
+  .outer-container {
+    max-width: var.$max-width;
+    margin-top: 45px;
+
+    #container.bi-lang {
+      width: 100%;
+      max-width: 1350px;
+      height: fit-content;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+
+      .code-area {
+        width: 50%;
+        height: fit-content;
+
+        // &:lang(ja) {
+        //   width: 45%;
+        // }
+
+        // &:lang(en) {
+        //   width: 55%;
+        // }
+      }
+    }
+
+    #base-container.uni-lang {
+      width: 100%;
+      max-width: 900px;
+      height: fit-content;
+      margin: auto;
+
+      .code-area {
+        width: 100%;
+        height: fit-content;
+      }
+    }
+  }
+}
+
+.code-area:lang(ja) {
+  $pb: 1px; //dammy padding to disable margin-offsetting 
+  font-size: 1rem;
+  $lh-para: var.$ldng-txt-ja;
+  $mt-para: 2em;
+
+  @mixin lh-crop-alt($lh, $be, $af) {
+    @if $be >0 {
+      &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-top: calc((1 - $lh) * .5em * $be);
+      }
+    }
+
+    @if $af >0 {
+      padding-bottom: $pb;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-bottom: calc((1 - $lh) * .5em * $af - $pb);
+      }
+    }
+  }
+
+  p {
+    $lh: $lh-para;
+    $mt: $mt-para;
+    margin-top: $mt;
+
+    font: {
+      family: 'lp-agenda-one-ja', 'FP-HiraKakuProN-W4', 'dnp-shuei-gothic-kin-std', sans-serif;
+      size: 1em;
+      weight: 400;
+      variant-numeric: tabular-nums lining-nums;
+      feature-settings: 'chws';
+    }
+
+    line-height: $lh;
+    letter-spacing: .03em;
+    @include lh-crop-alt($lh, 1, 1);
+  }
+
+  h3 {
+    font: {
+      family: 'lp-agenda-one-ja', 'TsukuAMGothicLStd-B', 'dnp-shuei-gothic-gin-std', sans-serif;
+      weight: 500;
+    }
+
+    &.supheading {
+      $lh: 1.5;
+      font-size: 2em;
+      line-height: $lh;
+      margin-top: 2em;
+      text-align: center;
+      @include lh-crop-alt($lh, 1, 1);
+
+      span.h-no {
+        font-weight: 800;
+        margin: 0 .12em;
+        letter-spacing: .02em;
+      }
+
+      span.h-title {
+        display: block;
+        font-size: .75em;
+        font-weight: 500;
+        // line-height: 1.2em;
+      }
+
+      +div>h3.supheading:first-child {
+        margin-top: 1em;
+      }
+    }
+
+    &.article-level {
+      $lh: 1.5;
+      font-size: 1.5em;
+      line-height: $lh;
+      margin-top: 3rem;
+      @include lh-crop-alt($lh, 1, 1);
+
+      span.h-no {
+        margin: 0 .12em;
+        letter-spacing: .02em;
+      }
+
+      span.h-title {
+        display: inline-block;
+
+        font: {
+          size: 1rem;
+          weight: 500;
+        }
+
+        line-height: 1.5em;
+        letter-spacing: .05em;
+
+        &::before {
+          content: "/";
+          display: inline-block;
+
+          font: {
+            // size: .8em;
+            weight: 300;
+          }
+
+          margin: 0 .75em;
+        }
+      }
+    }
+
+  }
+
+  ol,
+  ul {
+    padding-left: 1.5em;
+    line-height: 1;
+
+    li {
+      &.hasmarker {
+        padding-left: .5em;
+      }
+
+      &::marker {
+        font: {
+          family: 'lp-agenda-one-ja', 'dnp-shuei-gothic-kin-std', 'line-seed-ja', sans-serif;
+          weight: 800;
+        }
+
+      }
+    }
+
+    &.dp1 {
+      padding-left: 3em;
+    }
+
+    &.dp0,
+    &.closing {
+      $lh: $lh-para;
+      $mt: $mt-para;
+      padding-left: 0;
+      @include lh-crop-alt($lh, 1, 0);
+
+      >li.hasmarker {
+        list-style-position: inside;
+        padding-left: 0;
+        // margin-top: 2em;
+        margin-top: $mt;
+        @include lh-crop-alt($lh, 0, 1);
+
+        >:first-child {
+          display: inline;
+          margin-left: 1em;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &:nth-child(n+1) {
+          >p {
+            @include lh-crop-alt($lh, 0, 2)
+          }
+
+          // &:last-child {
+          //   >p {
+          //     @include lh-crop-alt($lh, 0, 1)
+          //   }
+          // }
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+
+          >p {
+            @include lh-crop-alt($lh, 0, 1)
+          }
+        }
+      }
+    }
+
+    &.closing {
+      margin-top: 4em;
+    }
+  }
+}
+
+.code-area:lang(en) {
+  $pb: 1px; //dammy padding to disable margin-offsetting 
+  font-size: var.$fs-txt-en;
+  $lh-para: var.$ldng-txt-en;
+  $mt-para: 1.8em;
+
+  @mixin lh-crop-alt($lh, $be, $af) {
+    @if $be >0 {
+      &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-top: calc((1 - $lh) * .5em * $be);
+      }
+    }
+
+    @if $af >0 {
+      padding-bottom: $pb;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-bottom: calc((1 - $lh) * .5em * $af - $pb);
+      }
+    }
+  }
+
+  p {
+    $lh: $lh-para;
+    $mt: $mt-para;
+    margin-top: $mt;
+
+    font: {
+      family: "agenda-one", sans-serif;
+      size: 1em;
+      weight: 400;
+      variant-numeric: oldstyle-nums proportional-nums;
+    }
+
+    line-height: $lh;
+    letter-spacing: .025em;
+    hyphens: auto;
+    @include lh-crop-alt($lh, 1, 1);
+  }
+
+  h3 {
+    font: {
+      family: "agenda-one", sans-serif;
+      weight: 600;
+    }
+
+    &.supheading {
+      $lh: 1.25;
+      font-size: 2em;
+      font-variant-caps: small-caps;
+      line-height: $lh;
+      letter-spacing: .01em;
+      margin-top: 1.8em;
+      text-align: center;
+      @include lh-crop-alt($lh, 1, 1);
+
+      span.h-title {
+        display: block;
+
+        font: {
+          size: .75em;
+          weight: 500;
+          variant-caps: normal;
+        }
+
+        line-height: 1.2em;
+        letter-spacing: .025em;
+      }
+
+      +div>h3.supheading:first-child {
+        margin-top: .9em;
+      }
+    }
+
+    &.article-level {
+      $lh: 1;
+      font-size: 1.5em;
+      font-style: italic;
+      line-height: $lh;
+      margin-top: 2.7rem;
+      @include lh-crop-alt($lh, 1, 1);
+
+      span.h-no {
+        margin: 0 .12em;
+        letter-spacing: .05em;
+      }
+
+      span.h-title {
+        display: inline-block;
+
+        font: {
+          size: 1rem;
+          weight: 500;
+          style: italic;
+        }
+
+        line-height: 1.2em;
+        letter-spacing: .05em;
+
+        &::before {
+          content: "–";
+          display: inline-block;
+
+          font: {
+            // size: .8em;
+            weight: 300;
+          }
+
+          margin: 0 .75em;
+        }
+      }
+    }
+
+  }
+
+  ol,
+  ul {
+    padding-left: 1.5em;
+    line-height: 1;
+
+    li {
+      &.hasmarker {
+        padding-left: .5em;
+      }
+
+      &::marker {
+        font: {
+          family: "agenda-one", sans-serif;
+          weight: 800;
+        }
+
+      }
+    }
+
+    &.dp1 {
+      padding-left: 3em;
+    }
+
+    &.dp0,
+    &.closing {
+      $lh: $lh-para;
+      $mt: $mt-para;
+      padding-left: 0;
+      @include lh-crop-alt($lh, 1, 0);
+
+      >li.hasmarker {
+        list-style-position: inside;
+        padding-left: 0;
+        // margin-top: 2em;
+        margin-top: $mt;
+        @include lh-crop-alt($lh, 0, 1);
+
+        >:first-child {
+          display: inline;
+          margin-left: .5em;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &:nth-child(n+1) {
+          >p {
+            @include lh-crop-alt($lh, 0, 2)
+          }
+
+          // &:last-child {
+          //   >p {
+          //     @include lh-crop-alt($lh, 0, 1)
+          //   }
+          // }
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+
+          >p {
+            @include lh-crop-alt($lh, 0, 1)
+          }
+        }
+      }
+    }
+
+    &.closing {
+      margin-top: 4em;
+    }
+  }
+}
+
+#base-container.bi-lang>.code-area {
+
+  &:lang(ja),
+  &:lang(en) {
+    $pb: 1px; //dammy padding to disable margin-offsetting 
+    font-size: 1rem;
+    $lh-para: var.$ldng-txt-ja;
+    $mt-para: 2em;
+
+    @mixin lh-crop-alt($lh, $be, $af) {
+      @if $be >0 {
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          margin-top: calc((1 - $lh) * .5em * $be);
+        }
+      }
+
+      @if $af >0 {
+        padding-bottom: $pb;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          margin-bottom: calc((1 - $lh) * .5em * $af - $pb);
+        }
+      }
+    }
+
+    p {
+      $lh: $lh-para;
+      $mt: $mt-para;
+      margin-top: $mt;
+      @include lh-crop-alt($lh, 1, 1);
+    }
+
+    h3 {
+      &.supheading {
+        $lh: 1.5;
+        font-size: 2em;
+        line-height: $lh;
+        margin-top: 2em;
+        text-align: center;
+        @include lh-crop-alt($lh, 1, 1);
+
+        +div>h3.supheading:first-child {
+          margin-top: 1em;
+        }
+      }
+
+      &.article-level {
+        $lh: 1.5;
+        font-size: 1.5em;
+        line-height: $lh;
+        margin-top: 3rem;
+        @include lh-crop-alt($lh, 1, 1);
+      }
+    }
+
+    ol,
+    ul {
+
+      &.dp0,
+      &.closing {
+        $lh: $lh-para;
+        $mt: $mt-para;
+        @include lh-crop-alt($lh, 1, 0);
+
+        >li.hasmarker {
+          margin-top: $mt;
+          @include lh-crop-alt($lh, 0, 1);
+
+          >:first-child {
+            &::before {
+              display: none;
+            }
+          }
+
+          &:nth-child(n+1) {
+            >p {
+              @include lh-crop-alt($lh, 0, 2);
+            }
+          }
+
+          &:last-child {
+            >p {
+              @include lh-crop-alt($lh, 0, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

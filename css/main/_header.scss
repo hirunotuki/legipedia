@@ -1,0 +1,39 @@
+@use '../variables/index' as var;
+@use 'common';
+
+header.article {
+  width: 100vw;
+  height: var.$hdr-hgt-art;
+  position: fixed;
+  top: 0;
+  padding: 12px var.$pds-art;
+  box-shadow: 0 0 12px -7px rgba(var.$clr-bk, .6);
+  background-color: rgba(var.$clr-wh, .6);
+  backdrop-filter: blur(3px);
+
+  div.wrap {
+    max-width: var.$max-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 a img {
+      height: 30px
+    }
+
+    nav {
+      height: fit-content;
+
+      font: {
+        family: 'lp-agenda-one-ja', 'TsukuAMGothicLStd-B','line-seed-ja', sans-serif;
+        size: 1rem;
+        weight: 600
+      }
+
+      ul {
+        display: flex;
+        gap: 2.5em
+      }
+    }
+  }
+}

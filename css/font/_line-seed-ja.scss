@@ -1,0 +1,27 @@
+@mixin ff-line-seed-ja($weight) {
+  @font-face {
+    font-family: 'line-seed-ja';
+
+    @if $weight ==200 {
+      src: url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF/LINESeedJP_OTF_Th.woff"),
+        url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF2/LINESeedJP_OTF_Th.woff2")
+    }
+
+    @if $weight ==400 {
+      src: url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF/LINESeedJP_OTF_Rg.woff"),
+        url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF2/LINESeedJP_OTF_Rg.woff2")
+    }
+
+    @if $weight ==600 {
+      src: url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF/LINESeedJP_OTF_Bd.woff"),
+        url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF2/LINESeedJP_OTF_Bd.woff2")
+    }
+
+    @if $weight ==800 {
+      src: url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF/LINESeedJP_OTF_Eb.woff"),
+        url("file:///C:/Users/quiss/Desktop/legipedia/fonts/LINE_Seed_JP/Web/WOFF2/LINESeedJP_OTF_Eb.woff2")
+    }
+
+    font-weight: $weight
+  }
+}

@@ -1,0 +1,102 @@
+@use 'variables' as fvar;
+
+$src-3n: url("https://use.typekit.net/af/f7e219/00000000000000007735f632/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/f7e219/00000000000000007735f632/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/f7e219/00000000000000007735f632/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+$src-3i: url("https://use.typekit.net/af/ee2632/00000000000000007735f64d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"), url("https://use.typekit.net/af/ee2632/00000000000000007735f64d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"), url("https://use.typekit.net/af/ee2632/00000000000000007735f64d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
+$src-4n: url("https://use.typekit.net/af/d0b15e/00000000000000007735f637/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/d0b15e/00000000000000007735f637/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/d0b15e/00000000000000007735f637/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+$src-4i: url("https://use.typekit.net/af/940846/00000000000000007735f631/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/940846/00000000000000007735f631/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/940846/00000000000000007735f631/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+$src-5n: url("https://use.typekit.net/af/86b166/00000000000000007735f636/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/86b166/00000000000000007735f636/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/86b166/00000000000000007735f636/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+$src-5i: url("https://use.typekit.net/af/a3ad01/00000000000000007735f651/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"), url("https://use.typekit.net/af/a3ad01/00000000000000007735f651/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"), url("https://use.typekit.net/af/a3ad01/00000000000000007735f651/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+$src-6n: url("https://use.typekit.net/af/b6c406/00000000000000007735f63d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/b6c406/00000000000000007735f63d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/b6c406/00000000000000007735f63d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+$src-6i: url("https://use.typekit.net/af/90292e/00000000000000007735f61f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"), url("https://use.typekit.net/af/90292e/00000000000000007735f61f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"), url("https://use.typekit.net/af/90292e/00000000000000007735f61f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
+$src-7n: url("https://use.typekit.net/af/6f82da/00000000000000007735f623/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/6f82da/00000000000000007735f623/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/6f82da/00000000000000007735f623/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+$src-7i: url("https://use.typekit.net/af/d7e281/00000000000000007735f64c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"), url("https://use.typekit.net/af/d7e281/00000000000000007735f64c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"), url("https://use.typekit.net/af/d7e281/00000000000000007735f64c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+$src-8n: url("https://use.typekit.net/af/a328d0/00000000000000007735f657/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"), url("https://use.typekit.net/af/a328d0/00000000000000007735f657/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"), url("https://use.typekit.net/af/a328d0/00000000000000007735f657/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype");
+$src-8i: url("https://use.typekit.net/af/1763fa/00000000000000007735f64e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff2"), url("https://use.typekit.net/af/1763fa/00000000000000007735f64e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff"), url("https://use.typekit.net/af/1763fa/00000000000000007735f64e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("opentype");
+$src-9n: url("https://use.typekit.net/af/723626/00000000000000007735f635/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"), url("https://use.typekit.net/af/723626/00000000000000007735f635/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"), url("https://use.typekit.net/af/723626/00000000000000007735f635/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+$src-9i: url("https://use.typekit.net/af/89a70b/00000000000000007735f62c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff2"), url("https://use.typekit.net/af/89a70b/00000000000000007735f62c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff"), url("https://use.typekit.net/af/89a70b/00000000000000007735f62c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("opentype");
+
+@mixin src($weight, $style) {
+  @if $style ==normal {
+
+      @if $weight ==800 {
+          src: $src-8n
+      }
+
+      @else if $weight ==700 {
+          src: $src-7n
+      }
+
+      @else if $weight ==600 {
+          src: $src-6n
+      }
+
+      @else if $weight ==500 {
+          src: $src-5n
+      }
+
+      @else if $weight ==400 {
+          src: $src-4n
+      }
+
+      @else if $weight ==300 {
+          src: $src-3n
+      }
+  }
+
+  @else if $style ==italic {
+
+      @if $weight ==800 {
+          src: $src-8i
+      }
+
+      @else if $weight ==700 {
+          src: $src-7i
+      }
+
+      @else if $weight ==600 {
+          src: $src-6i
+      }
+
+      @else if $weight ==500 {
+          src: $src-5i
+      }
+
+      @else if $weight ==400 {
+          src: $src-4i
+      }
+
+      @else if $weight ==300 {
+          src: $src-3i
+      }
+  }
+}
+
+@mixin ff-lp-agenda-one-ja($weight) {
+  @font-face {
+      font: {
+          family: 'lp-agenda-one-ja';
+          display: auto;
+          style: normal;
+          weight: $weight;
+      }
+
+      size-adjust: 114%;
+      ascent-override: 90%;
+      unicode-range: fvar.$rng-latin;
+      @include src($weight, normal)
+  }
+
+  @font-face {
+      font: {
+          family: 'lp-agenda-one-ja';
+          display: auto;
+          style: italic;
+          weight: $weight;
+      }
+
+      size-adjust: 114%;
+      ascent-override: 90%;
+      unicode-range: fvar.$rng-latin;
+      @include src($weight, italic)
+  }
+}
