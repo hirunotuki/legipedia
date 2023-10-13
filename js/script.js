@@ -27,7 +27,7 @@ function lang_selected() {
           url: './' + arrCodeLang[i] + '.html',
           dataType:'html'
         }).done((data) => {
-          $('.base-container').append(data);
+          $('#base-container').append(data);
         })
       }
     }
