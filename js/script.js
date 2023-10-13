@@ -19,6 +19,7 @@ function lang_selected() {
       $('div.outer-container>div').remove();
       var langNum = $('.btn-lang.selected').attr('container');
       $('div.outer-container').append('<div id="base-container" class="' + langNum + '">');
+      var arrCodeLang = []
       var arrCodeLang = $('.btn-lang.selected').attr('code-lang').split(' ');
       for (var i = 0; i < arrCodeLang.length; i++) {
         $.ajax({
@@ -35,27 +36,6 @@ function lang_selected() {
 $(() => {
   lang_selected();
 })
-
-// $('.btn-lang').on('click', function () {
-// console.log('clicked');
-//   if ($(this).hasClass('selected')) { }
-//   else {
-// $('button.btn-lang.selected').removeClass('selected');
-// $(this).addClass('selected');
-// }
-// })
-// $('.btn-lang').click
-
-// $(window).on('load', function () {
-//   lang_container_load()
-// })
-// $('.btn-lang').on('click', event => {
-//   console.log('clicked');
-// })
-// $('.btn-lang').click(function () {
-// console.log('clicked')
-// })
-// $('.btn-lang').addClass('selected')
 
 //align each element in bi-lang-container 
 function alignment() {
