@@ -25,11 +25,12 @@ function lang_selected() {
         $.ajax({
           type: 'get',
           url: './' + arrCodeLang[i] + '.html',
-          dataType:'html'
+          dataType: 'html'
         }).done((data) => {
           $('#base-container').append(data);
         })
       }
+      alignment()
     }
   })
 }
