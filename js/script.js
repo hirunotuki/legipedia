@@ -20,7 +20,7 @@ function lang_selected() {
       var langNum = $('.btn-lang.selected').attr('container');
       $('div.outer-container').append('<div id="base-container" class="' + langNum + '">');
       var arrCodeLang = $('.btn-lang.selected').attr('code-lang').split(' ');
-      for (var i = 0; i < arrCodeLang.length(); i++) {
+      for (var i = 0; i < arrCodeLang.length; i++) {
         $.ajax({
           type: 'get',
           url: '_' + arrCodeLang[i] + '.html',
