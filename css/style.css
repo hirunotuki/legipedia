@@ -698,7 +698,7 @@ main.article .outer-container {
   max-width: 1500px;
   margin-top: 45px;
 }
-main.article .outer-container #container.bi-lang {
+main.article .outer-container #vase-container.bi-lang {
   width: 100%;
   max-width: 1350px;
   height: -moz-fit-content;
@@ -708,7 +708,7 @@ main.article .outer-container #container.bi-lang {
   flex-direction: row;
   gap: 30px;
 }
-main.article .outer-container #container.bi-lang .code-area {
+main.article .outer-container #vase-container.bi-lang .code-area {
   width: 50%;
   height: -moz-fit-content;
   height: fit-content;
