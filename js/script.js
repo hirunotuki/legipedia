@@ -24,7 +24,7 @@ function lang_selected() {
       for (var i = 0; i < arrCodeLang.length; i++) {
         $.ajax({
           type: 'get',
-          url: '_' + arrCodeLang[i] + '.html',
+          url: './' + arrCodeLang[i] + '.html',
           dataType:'html'
         }).done((data) => {
           $('.base-container').append(data);
@@ -50,10 +50,6 @@ function alignment() {
 }
 $(window).on('load', () => {
   alignment()
-  // $('.btn-lang').on('click', event => {
-  //   console.log('clicked');
-  //   $(event.currentTarget).addClass('selected')
-  // })
 })
 $(window).on('resize', () => {
   $('div.code-area *[id*="sec"]').css('height', '');
