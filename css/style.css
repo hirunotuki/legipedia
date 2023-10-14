@@ -963,6 +963,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
 }
 .code-area:lang(en) h3.supheading {
   font-size: 2em;
+  font-weight: 700;
   font-variant-caps: small-caps;
   line-height: 1.25;
   letter-spacing: 0.01em;
