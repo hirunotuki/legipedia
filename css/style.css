@@ -731,7 +731,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
 }
 .code-area:lang(ja) p {
   margin-top: 2em;
-  font-family: "lp-agenda-one-ja", "FP-HiraKakuProN-W4", "dnp-shuei-gothic-kin-std", sans-serif;
+  font-family: "lp-agenda-one-ja", "DNPShueiGoGinStd-L", "FP-HiraKakuProN-W4", "dnp-shuei-gothic-kin-std", sans-serif;
   font-size: 1em;
   font-weight: 400;
   font-variant-numeric: tabular-nums lining-nums;
@@ -818,7 +818,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
 }
 .code-area:lang(ja) h3.article-level span.h-title {
   display: inline-block;
-  font-family: "UDKakugoC80Pro-M", "dnp-shuei-gothic-kin-std", sans-serif;
+  font-family: "DNPShueiGoGinStd-M", "UDKakugoC80Pro-M", "dnp-shuei-gothic-kin-std", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5em;
@@ -1132,11 +1132,8 @@ main.article .outer-container #base-container.uni-lang .code-area {
   margin-top: 4em;
 }
 
-#base-container.bi-lang > .code-area:lang(ja), #base-container.bi-lang > .code-area:lang(en) {
-  font-size: 1rem;
-}
 #base-container.bi-lang > .code-area:lang(ja) p, #base-container.bi-lang > .code-area:lang(en) p {
-  margin-top: 2em;
+  margin-top: 2rem;
   padding-bottom: 1px;
 }
 #base-container.bi-lang > .code-area:lang(ja) p::before, #base-container.bi-lang > .code-area:lang(en) p::before {
@@ -1144,19 +1141,17 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-top: -0.5em;
+  margin-top: -0.5rem;
 }
 #base-container.bi-lang > .code-area:lang(ja) p::after, #base-container.bi-lang > .code-area:lang(en) p::after {
   content: "";
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc(-0.5em - 1px);
+  margin-bottom: calc(-0.5rem - 1px);
 }
 #base-container.bi-lang > .code-area:lang(ja) h3.supheading, #base-container.bi-lang > .code-area:lang(en) h3.supheading {
-  font-size: 2em;
-  line-height: 1.5;
-  margin-top: 2em;
+  margin-top: 4rem;
   text-align: center;
   padding-bottom: 1px;
 }
@@ -1165,21 +1160,20 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-top: -0.25em;
+  margin-top: -0.5rem;
 }
 #base-container.bi-lang > .code-area:lang(ja) h3.supheading::after, #base-container.bi-lang > .code-area:lang(en) h3.supheading::after {
   content: "";
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc(-0.25em - 1px);
+  margin-bottom: calc(-0.5rem - 1px);
 }
 #base-container.bi-lang > .code-area:lang(ja) h3.supheading + div > h3.supheading:first-child, #base-container.bi-lang > .code-area:lang(en) h3.supheading + div > h3.supheading:first-child {
-  margin-top: 1em;
+  margin-top: 2rem;
 }
 #base-container.bi-lang > .code-area:lang(ja) h3.article-level, #base-container.bi-lang > .code-area:lang(en) h3.article-level {
   font-size: 1.5em;
-  line-height: 1.5;
   margin-top: 3rem;
   padding-bottom: 1px;
 }
@@ -1188,14 +1182,24 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-top: -0.25em;
+  margin-top: -0.375rem;
 }
 #base-container.bi-lang > .code-area:lang(ja) h3.article-level::after, #base-container.bi-lang > .code-area:lang(en) h3.article-level::after {
   content: "";
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc(-0.25em - 1px);
+  margin-bottom: calc(-0.375rem - 1px);
+}
+#base-container.bi-lang > .code-area:lang(ja) ol,
+#base-container.bi-lang > .code-area:lang(ja) ul, #base-container.bi-lang > .code-area:lang(en) ol,
+#base-container.bi-lang > .code-area:lang(en) ul {
+  border: 1px solid black;
+}
+#base-container.bi-lang > .code-area:lang(ja) ol li,
+#base-container.bi-lang > .code-area:lang(ja) ul li, #base-container.bi-lang > .code-area:lang(en) ol li,
+#base-container.bi-lang > .code-area:lang(en) ul li {
+  border: 1px dashed red;
 }
 #base-container.bi-lang > .code-area:lang(ja) ol.dp0::before, #base-container.bi-lang > .code-area:lang(ja) ol.closing::before,
 #base-container.bi-lang > .code-area:lang(ja) ul.dp0::before,
@@ -1206,14 +1210,14 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-top: -0.5em;
+  margin-top: -0.5rem;
 }
 #base-container.bi-lang > .code-area:lang(ja) ol.dp0 > li.hasmarker, #base-container.bi-lang > .code-area:lang(ja) ol.closing > li.hasmarker,
 #base-container.bi-lang > .code-area:lang(ja) ul.dp0 > li.hasmarker,
 #base-container.bi-lang > .code-area:lang(ja) ul.closing > li.hasmarker, #base-container.bi-lang > .code-area:lang(en) ol.dp0 > li.hasmarker, #base-container.bi-lang > .code-area:lang(en) ol.closing > li.hasmarker,
 #base-container.bi-lang > .code-area:lang(en) ul.dp0 > li.hasmarker,
 #base-container.bi-lang > .code-area:lang(en) ul.closing > li.hasmarker {
-  margin-top: 2em;
+  margin-top: 2rem;
   padding-bottom: 1px;
 }
 #base-container.bi-lang > .code-area:lang(ja) ol.dp0 > li.hasmarker::after, #base-container.bi-lang > .code-area:lang(ja) ol.closing > li.hasmarker::after,
@@ -1225,7 +1229,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc(-0.5em - 1px);
+  margin-bottom: calc(-0.5rem - 1px);
 }
 #base-container.bi-lang > .code-area:lang(ja) ol.dp0 > li.hasmarker > :first-child::before, #base-container.bi-lang > .code-area:lang(ja) ol.closing > li.hasmarker > :first-child::before,
 #base-container.bi-lang > .code-area:lang(ja) ul.dp0 > li.hasmarker > :first-child::before,
@@ -1250,7 +1254,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc(-1em - 1px);
+  margin-bottom: calc(-1rem - 1px);
 }
 #base-container.bi-lang > .code-area:lang(ja) ol.dp0 > li.hasmarker:last-child > p, #base-container.bi-lang > .code-area:lang(ja) ol.closing > li.hasmarker:last-child > p,
 #base-container.bi-lang > .code-area:lang(ja) ul.dp0 > li.hasmarker:last-child > p,
@@ -1268,7 +1272,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   width: 0;
   height: 0;
-  margin-bottom: calc(-0.5em - 1px);
+  margin-bottom: calc(-0.5rem - 1px);
 }
 
 div.lang-selector {
