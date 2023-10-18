@@ -21,7 +21,7 @@ $(() => {
 
 //load header
 $(() => {
-  $('header.article').load('https://kanwakyudai.github.io/legipedia/parts/header/_article.html')
+  $('header.article').load('https://kanwakyudai.github.io/legipedia/parts/header/article.html')
 })
 
 
