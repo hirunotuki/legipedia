@@ -601,6 +601,32 @@ main.article {
   margin: auto;
 }
 
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-container .loader {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://kanwakyudai.github.io/legipedia/images/logo/logo_inverted.svg");
+  background-size: 150px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 559px) {
+  .loader-container .loader {
+    background-size: 105px auto;
+  }
+}
+
 header.article {
   width: 100vw;
   height: 66px;
@@ -1303,7 +1329,7 @@ div.lang-selector div.wrap div button {
 }
 div.lang-selector div.wrap div button.selected, div.lang-selector div.wrap div button:hover {
   transition: all 0.1s ease-out;
-  color: #00afcc;
+  color: #ff5757;
 }
 div.lang-selector div.wrap div::after {
   content: "/";
