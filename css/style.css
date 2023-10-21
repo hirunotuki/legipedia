@@ -821,7 +821,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
 }
 .code-area:lang(ja) h3.supheading span.h-title span.latin {
   font-weight: inherit;
-  margin: 0;
+  margin: 0 0.02em;
   letter-spacing: 0.01em;
 }
 .code-area:lang(ja) h3.supheading + div > h3.supheading:first-child {
@@ -866,7 +866,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   margin: 0 0.75em;
 }
 .code-area:lang(ja) h3.article-level span.h-title span.latin {
-  margin: 0;
+  margin: 0 0.02em;
   letter-spacing: 0.02em;
 }
 .code-area:lang(ja) ol,
