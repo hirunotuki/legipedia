@@ -760,7 +760,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   font-family: "lp-agenda-one-ja", "DNPShueiGoGinStd-L", "FP-HiraKakuProN-W4", "dnp-shuei-gothic-kin-std", sans-serif;
   font-size: 1em;
   font-weight: 400;
-  font-variant-numeric: tabular-nums lining-nums;
+  font-variant-numeric: proportional-nums lining-nums;
   font-feature-settings: "chws";
   line-height: 2;
   letter-spacing: 0.03em;
@@ -779,6 +779,10 @@ main.article .outer-container #base-container.uni-lang .code-area {
   width: 0;
   height: 0;
   margin-bottom: calc(-0.5em - 1px);
+}
+.code-area:lang(ja) p span.latin {
+  margin: 0 0.05em;
+  letter-spacing: 0.03em;
 }
 .code-area:lang(ja) h3 {
   font-family: "lp-agenda-one-ja", "TsukuAMGothicLStd-B", "dnp-shuei-gothic-gin-std", sans-serif;
@@ -805,7 +809,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   height: 0;
   margin-bottom: calc(-0.25em - 1px);
 }
-.code-area:lang(ja) h3.supheading span.h-no {
+.code-area:lang(ja) h3.supheading span.latin {
   font-weight: 800;
   margin: 0 0.12em;
   letter-spacing: 0.02em;
@@ -814,6 +818,11 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: block;
   font-size: 0.75em;
   font-weight: 500;
+}
+.code-area:lang(ja) h3.supheading span.h-title span.latin {
+  font-weight: inherit;
+  margin: 0;
+  letter-spacing: 0.01em;
 }
 .code-area:lang(ja) h3.supheading + div > h3.supheading:first-child {
   margin-top: 1em;
@@ -838,7 +847,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   height: 0;
   margin-bottom: calc(-0.25em - 1px);
 }
-.code-area:lang(ja) h3.article-level span.h-no {
+.code-area:lang(ja) h3.article-level span.latin {
   margin: 0 0.12em;
   letter-spacing: 0.02em;
 }
@@ -855,6 +864,10 @@ main.article .outer-container #base-container.uni-lang .code-area {
   display: inline-block;
   font-weight: 300;
   margin: 0 0.75em;
+}
+.code-area:lang(ja) h3.article-level span.h-title span.latin {
+  margin: 0;
+  letter-spacing: 0.02em;
 }
 .code-area:lang(ja) ol,
 .code-area:lang(ja) ul {
@@ -1327,7 +1340,11 @@ div.lang-selector div.wrap div button {
   display: inline-block;
   transition: all 0.1s ease-out;
 }
-div.lang-selector div.wrap div button.selected, div.lang-selector div.wrap div button:hover {
+div.lang-selector div.wrap div button.selected {
+  transition: all 0.1s ease-out;
+  color: #cc4545;
+}
+div.lang-selector div.wrap div button:hover {
   transition: all 0.1s ease-out;
   color: #ff5757;
 }
