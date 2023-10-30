@@ -518,7 +518,7 @@ th {
 
 html {
   scroll-behavior: smooth;
-  font-size: 15px;
+  font-size: 16px;
 }
 @media screen and (max-width: 559px) {
   html {
@@ -761,7 +761,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
   font-size: 1em;
   font-weight: 400;
   font-variant-numeric: proportional-nums lining-nums;
-  font-feature-settings: "chws";
+  font-feature-settings: "chws" 1;
   line-height: 2;
   letter-spacing: 0.03em;
   padding-bottom: 1px;
@@ -968,7 +968,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
 }
 
 .code-area:lang(en) {
-  font-size: 16px;
+  font-size: 17px;
 }
 .code-area:lang(en) p {
   margin-top: 1.8em;
