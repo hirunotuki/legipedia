@@ -757,7 +757,7 @@ main.article .outer-container #base-container.uni-lang .code-area {
 }
 .code-area:lang(ja) p {
   margin-top: 2em;
-  font-family: "lp-agenda-one-ja", "FP-HiraginoUDSansFStdN-W4", "DNPShueiGoGinStd-L", "FP-HiraKakuProN-W4", "dnp-shuei-gothic-kin-std", sans-serif;
+  font-family: "lp-agenda-one-ja", "FP-HiraginoUDSansFStdN-W4", "FP-HiraKakuProN-W4", "DNPShueiGoGinStd-L", "dnp-shuei-gothic-kin-std", sans-serif;
   font-size: 1em;
   font-weight: 400;
   font-variant-numeric: proportional-nums lining-nums;
